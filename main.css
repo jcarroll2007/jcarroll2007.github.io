@@ -1150,7 +1150,7 @@ mark, .mark {
 .text-right {
   text-align: right; }
 
-.text-center {
+.text-center, .teamworks .signup .main-header, .teamworks .signup .signup-form-footer, .teamworks footer, main .main-header {
   text-align: center; }
 
 .text-justify {
@@ -1373,24 +1373,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, .teamworks .signup {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .container:after {
+  .container:before, .teamworks .signup:before, .container:after, .teamworks .signup:after {
     content: " ";
     display: table; }
-  .container:after {
+  .container:after, .teamworks .signup:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container {
+    .container, .teamworks .signup {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, .teamworks .signup {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, .teamworks .signup {
       width: 1170px; } }
 
 .container-fluid {
@@ -3179,11 +3179,11 @@ tbody.collapse.in {
     .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+.container > .navbar-header, .teamworks .signup > .navbar-header, .container > .navbar-collapse, .teamworks .signup > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+    .container > .navbar-header, .teamworks .signup > .navbar-header, .container > .navbar-collapse, .teamworks .signup > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
       margin-right: 0;
       margin-left: 0; } }
 
@@ -3223,7 +3223,7 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, .teamworks .navbar > .signup .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -3704,15 +3704,15 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, .teamworks .signup .jumbotron, .container-fluid .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container {
+  .jumbotron .container, .jumbotron .teamworks .signup, .teamworks .jumbotron .signup {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding-top: 48px;
       padding-bottom: 48px; }
-      .container .jumbotron, .container-fluid .jumbotron {
+      .container .jumbotron, .teamworks .signup .jumbotron, .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1, .jumbotron .h1 {
@@ -5021,120 +5021,408 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-main.exchange .exchange-heading {
-  width: 100%;
-  height: 100vh;
-  background-image: url('images/football.png');
-  background-size: cover;
+.teamworks .signup h1 {
+  margin: 0;
+  padding: 30px 0 20px 0; }
+.teamworks .signup .main-header {
+  margin-bottom: 35px; }
+.teamworks .signup .main-subtitle {
+  color: #004777;
+  font-size: 18px; }
+.teamworks .signup .signup-form {
+  background-color: #EEEEEE;
+  padding: 30px; }
+  .teamworks .signup .signup-form label {
+    font-size: 18px;
+    font-weight: 400; }
+  .teamworks .signup .signup-form input {
+    font-size: 16px; }
+.teamworks .signup .signup-form .groups .form-group {
+  width: calc(100% - 70px); }
+.teamworks .signup .signup-form .groups button {
+  display: inline;
+  width: 50px; }
+.teamworks .signup .signup-form .input-group-addon {
+  border: none;
+  border-left: 1px solid #BFBFBF;
+  border-radius: 0;
+  background-color: #FFFFFF;
+  top: 0;
+  margin-left: 15px;
+  cursor: pointer; }
+  .teamworks .signup .signup-form .input-group-addon:hover {
+    background-color: #E4E4E4; }
+.teamworks .signup .signup-form-footer {
+  padding: 30px;
+  background-color: #004777; }
+.teamworks .signup .signup-marketing-container {
+  position: fixed;
+  left: 970px;
+  top: 197px; }
+.teamworks .signup .signup-marketing-header {
+  padding-top: 30px; }
+.teamworks .signup .signup-marketing {
+  height: 580px;
+  padding: 45px 40px;
+  background-color: #16374E;
+  max-width: 540px; }
+  .teamworks .signup .signup-marketing .carousel img {
+    width: 100%;
+    height: calc(550px - 80px);
+    border: 1px solid #E0E0E0; }
+  .teamworks .signup .signup-marketing .carousel-indicators {
+    bottom: -50px; }
+  .teamworks .signup .signup-marketing .carousel-indicators li {
+    border: none;
+    background-color: #848484; }
+  .teamworks .signup .signup-marketing .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    border: none;
+    background-color: #FFFFFF; }
+  .teamworks .signup .signup-marketing .carousel .right.carousel-control {
+    background: none; }
+  .teamworks .signup .signup-marketing .carousel .left.carousel-control {
+    background: none; }
+  .teamworks .signup .signup-marketing .carousel .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: rgba(41, 41, 41, 0.74);
+    width: 100%; }
+
+add-group {
+  display: block;
+  padding: 30px;
+  background-color: #EEEEEE; }
+
+main.home [ng-click] {
+  cursor: pointer; }
+main.home p {
+  color: #8C8C8C;
+  font-size: 17px; }
+main.home h2 {
+  font-size: 22px; }
+main.home .home-banner {
+  padding: 120px 0;
+  margin-bottom: 15px;
+  background-image: url('images/background-participant.jpg');
   background-repeat: no-repeat;
-  position: relative; }
-  main.exchange .exchange-heading .exchange-heading-title {
-    position: absolute;
-    top: 40%;
-    left: 10%; }
-  main.exchange .exchange-heading h1 {
-    margin: 0;
-    color: white;
-    font-size: 85px;
-    font-weight: 200; }
-    main.exchange .exchange-heading h1 .fa.fa-circle {
-      font-size: 16px;
-      vertical-align: middle; }
-  main.exchange .exchange-heading .heading-team {
-    color: #0093FF; }
-  main.exchange .exchange-heading .heading-works {
-    color: #0EC751; }
-  main.exchange .exchange-heading .subheading {
-    font-weight: 200;
-    font-size: 40px;
+  background-size: cover;
+  background-position: 30%;
+  background-color: #2e6797; }
+  main.home .home-banner h1 {
+    color: #D0D0D0;
+    display: inline-block;
+    padding: 0; }
+  main.home .home-banner .home-banner-user {
     color: white; }
-  main.exchange .exchange-heading .next-section-button {
-    position: absolute;
-    bottom: 30px;
-    left: 50%; }
-    main.exchange .exchange-heading .next-section-button .fa.fa-angle-down {
-      font-size: 78px;
-      color: white; }
-  main.exchange .exchange-heading .get-started-button {
-    position: absolute;
-    top: 45%;
-    right: 10%; }
-main.exchange button {
-  vertical-align: middle;
-  border: 2px solid #FFFFFF;
-  color: white;
-  font-size: 54px;
-  font-weight: 300;
-  padding: 10px 40px;
-  min-width: 400px;
-  background-color: transparent;
-  transition: color 0.7s ease, background-color 0.7s ease; }
-  main.exchange button:hover {
-    transition: color 0.7s ease, background-color 0.7s ease;
-    background-color: rgba(255, 255, 255, 0.35); }
-main.exchange .section-heading h2 {
-  color: #444444;
-  font-size: 64px;
-  font-weight: 300;
-  margin: 0; }
-main.exchange .section-heading .subheading {
-  font-size: 30px;
-  font-weight: 300;
-  max-width: 450px;
+main.home .home-dashboard-content {
+  padding: 20px; }
+main.home .home-dashboard-sidebox {
+  margin-bottom: 15px; }
+  main.home .home-dashboard-sidebox .home-dashboard-content {
+    border-bottom: 2px solid #A2A2A2; }
+main.home .home-dashboard-tips {
+  margin-bottom: 15px; }
+  main.home .home-dashboard-tips .home-dashboard-content {
+    background-color: #EFEFEF; }
+main.home .home-teamworks-products .home-dashboard-content {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 10px; }
+main.home .home-teamworks-products p {
+  font-size: 24px; }
+main.home .home-teamworks-products button {
+  background-color: #66B8FF; }
+main.home .home-success-coach .home-success-coach-image {
+  margin: 20px 0;
+  padding: 18px;
+  border-radius: 50%;
+  background-color: white;
+  height: 90px;
+  width: 90px;
   display: inline-block; }
-main.exchange .exchange-fundraising-online {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: #ECECEC; }
-  main.exchange .exchange-fundraising-online .section-heading {
-    position: absolute;
-    top: 40%;
-    left: 10%; }
-  main.exchange .exchange-fundraising-online img {
-    position: absolute;
-    width: 700px;
-    height: auto;
-    right: 200px;
-    top: 20%; }
-main.exchange .exchange-fundraising-types {
-  background-color: #3E3E3E;
-  width: 100%;
+main.home .home-success-coach .home-success-coach-image > span {
+  font-size: 45px; }
+main.home .home-success-coach .home-success-coach-name {
+  font-size: 24px;
+  margin-bottom: 20px; }
+main.home .home-success-coach .success-coach-contact-icon {
+  margin-right: 10px; }
+main.home .home-active-fundraiser {
+  margin-bottom: 15px;
+  background-image: url('images/active-fundraiser-bg.jpg'); }
+  main.home .home-active-fundraiser.not-active .home-dashboard-content {
+    background-image: url('images/active-fundraiser.png'); }
+  main.home .home-active-fundraiser h2 {
+    color: white; }
+  main.home .home-active-fundraiser p, main.home .home-active-fundraiser .fa.fa-angle-up, main.home .home-active-fundraiser .fa.fa-angle-down {
+    color: #DADADA; }
+  main.home .home-active-fundraiser .no-active-fundraiser-message {
+    padding: 50px 250px; }
+  main.home .home-active-fundraiser .new-application-button {
+    margin-bottom: 40px; }
+  main.home .home-active-fundraiser.home-approved-fundraiser h2 {
+    text-align: center;
+    color: #0FB10F;
+    font-size: 24px; }
+  main.home .home-active-fundraiser .fundraiser-progress {
+    padding-top: 40px;
+    padding-bottom: 70px; }
+    main.home .home-active-fundraiser .fundraiser-progress .fundraiser-raised-data {
+      display: inline-block;
+      margin-left: 122px; }
+      main.home .home-active-fundraiser .fundraiser-progress .fundraiser-raised-data p {
+        font-size: 18px;
+        margin: 0; }
+      main.home .home-active-fundraiser .fundraiser-progress .fundraiser-raised-data p:first-of-type {
+        color: #11af4b;
+        font-size: 18px; }
+    main.home .home-active-fundraiser .fundraiser-progress .fundraiser-expected-data {
+      display: inline-block;
+      margin-left: 164px; }
+      main.home .home-active-fundraiser .fundraiser-progress .fundraiser-expected-data p {
+        font-size: 18px;
+        margin: 0; }
+      main.home .home-active-fundraiser .fundraiser-progress .fundraiser-expected-data p:first-of-type {
+        font-size: 18px;
+        color: #11af4b; }
+    main.home .home-active-fundraiser .fundraiser-progress .progress-raised {
+      display: inline-block;
+      height: 40px;
+      width: 150px;
+      background-color: #11af4b;
+      float: left; }
+    main.home .home-active-fundraiser .fundraiser-progress .progress-expected {
+      display: inline-block;
+      height: 40px;
+      width: 50px;
+      background-color: #d0d0d0;
+      float: left; }
+    main.home .home-active-fundraiser .fundraiser-progress .progress-goal {
+      display: inline-block;
+      height: 40px;
+      width: 250px;
+      background-color: #FFFFFF;
+      float: left; }
+main.home .home-marketing {
+  margin-bottom: 15px; }
+  main.home .home-marketing h2 {
+    color: #333333; }
+  main.home .home-marketing .carousel {
+    margin-bottom: 70px; }
+  main.home .home-marketing .home-dashboard-content {
+    background-color: #ECECEC;
+    min-height: 500px;
+    padding: 50px 160px; }
+  main.home .home-marketing .no-active-fundraiser-message {
+    padding: 50px 250px; }
+  main.home .home-marketing .carousel img {
+    width: 100%;
+    height: calc(717px - 160px);
+    border: 1px solid #E0E0E0; }
+  main.home .home-marketing .carousel-indicators {
+    bottom: -50px; }
+  main.home .home-marketing .carousel-indicators li {
+    border: none;
+    background-color: #FFFFFF; }
+  main.home .home-marketing .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    border: none;
+    background-color: #333333; }
+  main.home .home-marketing .carousel .right.carousel-control {
+    background: none; }
+  main.home .home-marketing .carousel .left.carousel-control {
+    background: none; }
+  main.home .home-marketing .carousel .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(41, 41, 41, 0.74);
+    width: 100%; }
+  main.home .home-marketing button {
+    background-color: #66B8FF;
+    color: white; }
+main.home .pending-fundraisers h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0; }
+main.home .pending-fundraisers .fundraisers-list {
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+  list-style: none;
+  padding: 0; }
+main.home .pending-fundraisers .fundraisers-list-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 85px;
   position: relative; }
-  main.exchange .exchange-fundraising-types .section-heading {
+  main.home .pending-fundraisers .fundraisers-list-item .image-container {
+    display: inline-block;
+    vertical-align: middle; }
+  main.home .pending-fundraisers .fundraisers-list-item img {
     position: absolute;
-    left: 10%;
-    top: 100px; }
-    main.exchange .exchange-fundraising-types .section-heading h2, main.exchange .exchange-fundraising-types .section-heading .subheading {
-      color: #ECECEC; }
-  main.exchange .exchange-fundraising-types .fundraising-type {
-    padding: 40px; }
-  main.exchange .exchange-fundraising-types .section-content {
-    padding-top: 350px;
-    color: #ECECEC; }
-    main.exchange .exchange-fundraising-types .section-content h3 {
-      font-size: 30px;
-      font-weight: 300; }
-    main.exchange .exchange-fundraising-types .section-content .type-body {
-      background-color: #ECECEC;
-      width: 100%;
-      height: 500px; }
-    main.exchange .exchange-fundraising-types .section-content .button-column {
-      padding-top: 50px;
-      padding-bottom: 75px; }
+    top: 10px;
+    left: 0;
+    width: 75px; }
+  main.home .pending-fundraisers .fundraisers-list-item .fundraiser-info {
+    display: inline-block;
+    min-height: 68px;
+    width: 50%; }
+  main.home .pending-fundraisers .fundraisers-list-item .fundraiser-state {
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle; }
+  main.home .pending-fundraisers .fundraisers-list-item .progress-bar-green {
+    display: inline-block;
+    min-height: 37px;
+    width: 50px;
+    background-color: #11af4b;
+    border: none;
+    box-shadow: none;
+    float: left; }
+  main.home .pending-fundraisers .fundraisers-list-item .progress-bar {
+    display: inline-block;
+    min-height: 37px;
+    width: 150px;
+    background-color: #DEDEDE;
+    border: none;
+    box-shadow: none;
+    margin-right: 15px; }
+
+.teamworks .application-content-header {
+  background-color: #2e6797;
+  padding: 50px 0;
+  margin-bottom: 15px; }
+  .teamworks .application-content-header h1 {
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 30px; }
+  .teamworks .application-content-header p {
+    color: #F5F5F5;
+    font-size: 16px; }
+
+fundraising-application-section {
+  display: block;
+  margin-bottom: 15px; }
+  fundraising-application-section h2 {
+    text-transform: uppercase; }
+  fundraising-application-section p, fundraising-application-section label, fundraising-application-section div, fundraising-application-section input.form-control {
+    font-size: 16px; }
+  fundraising-application-section .section-control-buttons {
+    margin-top: 30px; }
+  fundraising-application-section .section-step {
+    color: #8F8683;
+    font-size: 18px; }
+  fundraising-application-section .fundraising-application-section .fundraising-application-section-template {
+    padding: 30px;
+    background-color: #EEEEEE; }
+  fundraising-application-section .initial-info .input-group {
+    min-height: 120px; }
+  fundraising-application-section .dates .date-range {
+    margin-bottom: 30px; }
+    fundraising-application-section .dates .date-range .input-group {
+      display: inline-block;
+      margin-right: 15px; }
+  fundraising-application-section .marketing-selection .col-xs-3 {
+    margin-bottom: 15px; }
+    fundraising-application-section .marketing-selection .col-xs-3 h3 {
+      min-height: 80px; }
+    fundraising-application-section .marketing-selection .col-xs-3 button {
+      margin-top: 30px; }
+  fundraising-application-section .product-selection {
+    background-color: #FFFFFF;
+    height: 400px;
+    margin-top: 20px; }
+    fundraising-application-section .product-selection .teamworks-product {
+      padding: 0 30px;
+      margin-top: 15px; }
+      fundraising-application-section .product-selection .teamworks-product .product-selection {
+        overflow: auto; }
+      fundraising-application-section .product-selection .teamworks-product .average-profit {
+        background-color: #00B287;
+        color: white;
+        font-size: 16px;
+        padding: 2px 0; }
+      fundraising-application-section .product-selection .teamworks-product img {
+        width: 100%;
+        border: 1px solid #eeeeee;
+        min-height: 225px; }
+      fundraising-application-section .product-selection .teamworks-product img + div {
+        position: absolute;
+        width: 100%;
+        padding: 8px 0;
+        bottom: 0;
+        font-size: 18px;
+        background-color: rgba(53, 53, 53, 0.66);
+        color: white; }
+      fundraising-application-section .product-selection .teamworks-product .product-info {
+        padding: 10px;
+        border: 1px solid #eeeeee; }
+      fundraising-application-section .product-selection .teamworks-product button {
+        background-color: #2885C3;
+        color: white;
+        width: 50%;
+        float: left;
+        border: none;
+        padding: 8px 0; }
+      fundraising-application-section .product-selection .teamworks-product button:first-of-type {
+        border-right: 1px solid #EEEEEE; }
+  fundraising-application-section .custom-products {
+    margin-top: 15px;
+    display: inline-flex; }
+    fundraising-application-section .custom-products .custom-product {
+      margin-right: 15px;
+      width: 180px;
+      margin-bottom: 15px;
+      display: inline-block; }
+      fundraising-application-section .custom-products .custom-product .image {
+        text-align: center;
+        padding: 50px 0;
+        background-color: #C7C7C7; }
+      fundraising-application-section .custom-products .custom-product .fa-photo {
+        color: #FFFFFF;
+        font-size: 45px; }
+    fundraising-application-section .custom-products .custom-product-add {
+      display: inline-block;
+      height: 462px;
+      width: 180px;
+      background-color: white;
+      text-align: center;
+      padding-top: 218px; }
+    fundraising-application-section .custom-products h3 {
+      margin: 0;
+      padding: 10px 0;
+      font-size: 18px; }
+    fundraising-application-section .custom-products .custom-product-profit {
+      text-align: center;
+      padding: 10px 0;
+      color: white;
+      background-color: #00B287;
+      font-size: 17px; }
+  fundraising-application-section .custom-product-description {
+    background-color: white;
+    padding: 10px; }
+  fundraising-application-section .vendor-info .input-group {
+    margin-bottom: 20px; }
 
 .teamworks .navbar.navbar-default {
-  background-color: rgba(23, 23, 23, 0.69);
+  background-color: transparent;
   border: none;
+  border-bottom: 2px solid #dfdedd;
   border-radius: 0;
-  margin-bottom: 0;
-  position: fixed !important;
-  top: 0;
-  z-index: 1000;
-  width: 100%; }
+  margin-bottom: 0; }
   .teamworks .navbar.navbar-default .navbar-brand {
-    font-weight: 300;
-    color: #CCCCCC; }
+    line-height: 50px; }
   .teamworks .navbar.navbar-default .nav > li a {
     line-height: 50px; }
   .teamworks .navbar.navbar-default .user-notifications span {
@@ -5143,3 +5431,54 @@ main.exchange .exchange-fundraising-types {
     font-size: 25px; }
   .teamworks .navbar.navbar-default .user-dropdown span.fa.fa-chevron-down {
     font-size: 10px; }
+
+.teamworks footer {
+  padding: 30px;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #f5f5f5;
+  margin-top: 50px; }
+  .teamworks footer .footer-logo {
+    height: 80px; }
+
+.teamworks h1 {
+  font-size: 24px;
+  color: #8F8683; }
+.teamworks h2 {
+  font-size: 20px;
+  color: #8F8683;
+  margin-top: 0;
+  margin-bottom: 15px; }
+
+main h1 {
+  margin: 0;
+  padding: 50px 0 55px 0; }
+main .main-header {
+  margin-bottom: 35px; }
+main .main-subtitle {
+  color: #8F8683; }
+
+.teamworks .form-control {
+  border-radius: 0;
+  border: 1px solid white;
+  box-shadow: none; }
+
+.teamworks .btn {
+  border-radius: 10px;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1em;
+  padding: .8em 2em;
+  border: none; }
+.teamworks .btn-lg, .teamworks .btn-group-lg > .btn {
+  font-size: 1.2em;
+  padding: .7em 2em; }
+.teamworks .btn-success {
+  background-color: #0fb10f;
+  border: none; }
+
+.teamworks .modal-dialog .modal-content {
+  border-radius: 0;
+  box-shadow: none;
+  border: none; }

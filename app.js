@@ -54,11 +54,11 @@
             ///////////////////////////
             // Home
             ///////////////////////////
-            .state('exchange', {
-                url: '/exchange',
-                templateUrl: 'app/exchange/exchange.html',
-                controller: 'ExchangeController',
-                controllerAs: 'exchange'
+            .state('home', {
+                url: '/home',
+                templateUrl: 'app/home/home.html',
+                controller: 'HomeController',
+                controllerAs: 'home'
             })
 
             .state('application', {
@@ -70,7 +70,7 @@
 
     angular.module('app.routes', [
         'app.signup',
-        'app.exchange',
+        'app.home',
         'app.application',
         'components.header',
         'components.footer',
@@ -166,12 +166,28 @@
 (function () {
     'use strict';
 
-    function ExchangeController() {
-        this.is = 'notEmpty';
+    function HomeController() {
+        this.campaignManagersActive = true;
+        this.welcomeActive = true;
+        this.activeFundraiserState = 4;
+
+        this.slides = [{
+            image: 'http://www.myteamworks.org/home/wp-content/uploads/2015/10/approval.jpg',
+            title: 'manage all of your fundraisers.'
+        }, {
+            image: 'http://www.myteamworks.org/home/wp-content/uploads/2015/10/funraising_coach.png',
+            title: 'walk you through the process.'
+        }, {
+            image: 'http://www.myteamworks.org/home/wp-content/uploads/2014/01/build-your-own1.jpg',
+            title: 'sell your products online.'
+        }, {
+            image: 'http://www.myteamworks.org/home/wp-content/uploads/2015/10/reports.png',
+            title: 'create reports.'
+        }];
     }
 
-    angular.module('app.exchange', [])
-        .controller('ExchangeController', ExchangeController);
+    angular.module('app.home', [])
+        .controller('HomeController', HomeController);
 }());
 (function () {
     'use strict';
@@ -224,21 +240,6 @@
 (function () {
     'use strict';
 
-    function header() {
-        return {
-            restrict: 'E',
-            templateUrl: 'components/header/header.html',
-            controller: angular.noop,
-            scope: {}
-        };
-    }
-
-    angular.module('components.header', [])
-        .directive('header', header);
-}());
-(function () {
-    'use strict';
-
     function footer() {
         return {
             restrict: 'E',
@@ -250,6 +251,21 @@
 
     angular.module('components.footer', [])
         .directive('footer', footer);
+}());
+(function () {
+    'use strict';
+
+    function header() {
+        return {
+            restrict: 'E',
+            templateUrl: 'components/header/header.html',
+            controller: angular.noop,
+            scope: {}
+        };
+    }
+
+    angular.module('components.header', [])
+        .directive('header', header);
 }());
 (function () {
     'use strict';
