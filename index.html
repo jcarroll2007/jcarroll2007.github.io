@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="teamworks">
+<html lang="en" ng-app="myAppName">
 <head>
   <meta charset="utf-8">
   <title>myAppName</title>
@@ -7,10 +7,11 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,400italic,600' rel='stylesheet' type='text/css'>
 
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/bower_components/flexboxgrid/dist/flexboxgrid.css">
+  <link rel="stylesheet" href="/bower_components/pure/pure.css">
   <!-- endinject -->
 
   <!-- inject:css -->
@@ -18,17 +19,14 @@
   <!-- endinject -->
 
 </head>
-<body class="teamworks">
+<body class="myAppName">
 
-  <ui-view></ui-view>
+  <div ui-view></div>
 
   <!-- bower:js -->
   <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
   <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="/bower_components/lodash/lodash.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
   <!-- endinject -->
 
   <!-- inject:js -->
