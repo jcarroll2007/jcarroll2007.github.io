@@ -67,7 +67,7 @@
 	
 	var _landing2 = _interopRequireDefault(_landing);
 	
-	__webpack_require__(/*! ./styles/styles.scss */ 51);
+	__webpack_require__(/*! ./styles/styles.scss */ 52);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -47287,14 +47287,14 @@
 	
 	__webpack_require__(/*! ./landing.scss */ 48);
 	
-	__webpack_require__(/*! ./../../components/ng-smooth-scroll/ng-smooth-scroll */ 50);
+	var _landing = __webpack_require__(/*! ./landing.html */ 50);
+	
+	var _landing2 = _interopRequireDefault(_landing);
+	
+	__webpack_require__(/*! ./../../components/ng-smooth-scroll/ng-smooth-scroll */ 51);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// import 'fullpage.js/jquery.fullPage.js';
-	// import 'angular-fullpage.js';
-	// import 'odometer';
-	// import 'angular-odometer-js';
 	var LandingController = function () {
 	    function LandingController($timeout) {
 	        (0, _classCallCheck3.default)(this, LandingController);
@@ -47311,9 +47311,14 @@
 	    }]);
 	    return LandingController;
 	}();
+	// import 'fullpage.js/jquery.fullPage.js';
+	// import 'angular-fullpage.js';
+	// import 'odometer';
+	// import 'angular-odometer-js';
+	
 	
 	var landingComponent = {
-	    templateUrl: 'common/landing/landing.html',
+	    template: _landing2.default,
 	    controller: LandingController
 	};
 	
@@ -47985,6 +47990,15 @@
 
 /***/ },
 /* 50 */
+/*!*****************************************!*\
+  !*** ./src/common/landing/landing.html ***!
+  \*****************************************/
+/***/ function(module, exports) {
+
+	module.exports = "<main id=\"top\">\r\n    <header class=\"main-header row middle-xs\">\r\n        <div class=\"container\">\r\n            <div class=\"row middle-xs\">\r\n                <div class=\"brand col-xs\">\r\n                    <h1>Free Church Kiosk</h1>\r\n                </div>\r\n                <div class=\"contact-information col-xs\">\r\n                    1-866-933-7048\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </header>\r\n    <div class=\"landing-main-body\">\r\n\r\n    </div>\r\n    <div ng-scroll-class=\"landing-nav-links-placeholder\"></div>\r\n    <div class=\"landing-nav-links row middle-xs center-xs\"\r\n        ng-scroll-class=\"pin-to-top\">\r\n        <div class=\"pure-menu pure-menu-horizontal\">\r\n            <ul class=\"pure-menu-list\">\r\n                <li class=\"pure-menu-item brand\">\r\n                    <a class=\"pure-menu-link\"\r\n                        href=\"#\"\r\n                        scroll-to=\"top\">\r\n                        Free Church Kiosk\r\n                    </a>\r\n                </li>\r\n                <li class=\"pure-menu-item\" >\r\n                    <a class=\"pure-menu-link\"\r\n                        href=\"#\"\r\n                        scroll-to=\"increase-donations\">\r\n                        Features\r\n                    </a>\r\n                </li>\r\n                <li class=\"pure-menu-item\">\r\n                    <a class=\"pure-menu-link\"\r\n                        scroll-to=\"mobile-apps\">\r\n                        How It Works\r\n                    </a>\r\n                </li>\r\n                <li class=\"pure-menu-item limited-time\">\r\n                    <a class=\"pure-menu-link\"\r\n                        href=\"#\"\r\n                        scroll-to=\"limited-time-offer\">\r\n                        Limited Time Offer\r\n                    </a>\r\n                </li>\r\n                <li class=\"pure-menu-item active\">\r\n                    <a class=\"pure-menu-link\"\r\n                        href=\"#\"\r\n                        scroll-to=\"contact\">\r\n                        Contact Us\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Features -->\r\n    <div class=\"feature feature-left increase-donations\"\r\n        id=\"increase-donations\">\r\n        <div class=\"information\" when-visible=\"$ctrl.fadeIn\">\r\n            <div class=\"information-title\">\r\n                Increase Donations\r\n            </div>\r\n            <div class=\"information-detail\">\r\n                Our system has been proven to increase donations by up to 30%!\r\n            </div>\r\n        </div>\r\n        <div class=\"picture\">\r\n        </div>\r\n    </div>\r\n    <div class=\"feature feature-right mobile-apps\"\r\n        id=\"mobile-apps\">\r\n        <div class=\"information\" when-visible=\"$ctrl.fadeIn\">\r\n            <div class=\"information-title\">\r\n                Online and Mobile Giving\r\n            </div>\r\n            <div class=\"information-detail\">\r\n                The ease of access to our system is unbeatable.\r\n            </div>\r\n        </div>\r\n        <div class=\"picture\">\r\n        </div>\r\n    </div>\r\n    <div class=\"feature feature-left free-kiosk\">\r\n        <div class=\"information\" when-visible=\"$ctrl.fadeIn\">\r\n            <div class=\"information-title\">\r\n                Free iPad Kiosk\r\n            </div>\r\n            <div class=\"information-detail\">\r\n                When you use our system, we will give you an iPad kiosk with a credit card reader - free of charge!\r\n            </div>\r\n        </div>\r\n        <div class=\"picture\">\r\n        </div>\r\n    </div>\r\n    <!-- Features -->\r\n\r\n    <!-- Limited Time Offer -->\r\n    <div class=\"limited-time-offer row center-xs middle-xs row-no-margin\"\r\n        id=\"limited-time-offer\">\r\n        <div class=\"container\">\r\n            <div class=\"col-xs-6 detail\"\r\n                when-visible=\"$ctrl.fadeIn\">\r\n                <span class=\"text-red\">LIMITED TIME OFFER</span>\r\n                <h2 class=\"limited-time-offer-title\">\r\n                    Free iPad Kiosk\r\n                </h2>\r\n                <p class=\"limited-time-offer-description\">\r\n                    When you sign up for giving with our services. Act quickly before this offer expires.\r\n                    <a href=\"#\" scroll-to=\"contact\">Contact us</a> to learn more.\r\n                </p>\r\n                <!-- <div class=\"text-right get-offer-container\">\r\n                    <button class=\"get-offer-btn\">\r\n                        GET THIS OFFER\r\n                    </button>\r\n                </div> -->\r\n            </div>\r\n            <div class=\"col-xs-6\">\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Limited Time Offer -->\r\n    <div id=\"contact\"></div>\r\n    <!-- Contact -->\r\n    <div class=\"contact-form-parent\">\r\n        <div class=\"contact-form-container\">\r\n            <div class=\"center-xs\">\r\n                <h2>Contact Us</h2>\r\n            </div>\r\n            <div class=\"container\">\r\n                <form class='contact-form'>\r\n                    <div class=\"row center-xs \">\r\n                        <div class=\"form-input col-xs-12\">\r\n                            <input class=\"form-control\" placeholder=\"Name\">\r\n                        </div>\r\n                        <div class=\"form-input col-xs-12\">\r\n                            <input class=\"form-control\" placeholder=\"Email\">\r\n                        </div>\r\n                        <div class=\"form-input col-xs-12\">\r\n                            <input class=\"form-control\" placeholder=\"Church\">\r\n                        </div>\r\n                        <div placeholder=\"Note\" class=\"form-input col-xs-12\">\r\n                            <textarea class=\"form-control\"></textarea>\r\n                        </div>\r\n                    </div>\r\n                    <input class=\"form-submit\" type=\"submit\" value=\"Submit\">\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Contact -->\r\n</main>";
+
+/***/ },
+/* 51 */
 /*!*************************************************************!*\
   !*** ./src/components/ng-smooth-scroll/ng-smooth-scroll.js ***!
   \*************************************************************/
@@ -48266,7 +48280,7 @@
 	})();
 
 /***/ },
-/* 51 */
+/* 52 */
 /*!********************************!*\
   !*** ./src/styles/styles.scss ***!
   \********************************/
@@ -48275,7 +48289,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../~/css-loader!./../../~/sass-loader!!./styles.scss */ 52);
+	var content = __webpack_require__(/*! !./../../~/css-loader!./../../~/sass-loader!!./styles.scss */ 53);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ./../../~/style-loader/addStyles.js */ 9)(content, {});
@@ -48295,7 +48309,7 @@
 	}
 
 /***/ },
-/* 52 */
+/* 53 */
 /*!***************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader!./src/styles/styles.scss ***!
   \***************************************************************/
@@ -48303,7 +48317,7 @@
 
 	exports = module.exports = __webpack_require__(/*! ./../../~/css-loader/lib/css-base.js */ 8)();
 	// imports
-	exports.i(__webpack_require__(/*! -!./../../~/css-loader!./../../~/flexboxgrid/dist/flexboxgrid.css */ 53), "");
+	exports.i(__webpack_require__(/*! -!./../../~/css-loader!./../../~/flexboxgrid/dist/flexboxgrid.css */ 54), "");
 	
 	// module
 	exports.push([module.id, "body {\n  margin: 0;\n  font-family: 'Raleway', sans-serif; }\n", ""]);
@@ -48312,7 +48326,7 @@
 
 
 /***/ },
-/* 53 */
+/* 54 */
 /*!***********************************************************!*\
   !*** ./~/css-loader!./~/flexboxgrid/dist/flexboxgrid.css ***!
   \***********************************************************/
